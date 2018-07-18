@@ -1,0 +1,88 @@
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">SQL Developer Password Decryptor</a>
+</nav>
+
+<div class="container">
+
+  <div class="row my-5">
+
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <div class="form-group">
+            <label for="encryptedPassword">Encrypted Password</label>
+            <input id="encryptedPassword" type="text" class="form-control" [(ngModel)]="encryptedPassword" aria-describedby="encryptedPasswordHelp">
+            <small id="encryptedPasswordHelp" class="form-text text-muted">
+              Encrypted passwords are stored encrypted in the
+              <code>connections.xml</code> file which can be searched for in these locations:
+              <br>
+              <li>Windows:
+                <code>C:\Users\&lt;USER&gt;\AppData\Roaming\SQL Developer\</code>
+              </li>
+              <li>Linux:
+                <code>~/.sqldeveloper/</code>
+              </li>
+              <br>
+              <pre><code>
+                // connections.xml
+                &lt;StringRefAddr addrType=&quot;password&quot;&gt;
+                &lt;Contents&gt;F35q3vdbVrI=&lt;/Contents&gt;
+                &lt;/StringRefAddr&gt;
+              </code></pre>
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="systemId">System Id</label>
+            <input id="systemId" type="text" class="form-control" [(ngModel)]="systemId" aria-describedby="systemIdHelp">
+            <small id="systemIdHelp" class="form-text text-muted">
+              Encryption key by default is a machine-unique value
+              <code>db.system.id</code> in the
+              <code>product-preferences.xml</code> which for in above mentioned locations.
+            </small>
+          </div>
+          <button class="btn btn-primary" (click)="decrypt()">Decrypt</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              Oracle SQL Developer allows a user to associate passwords with connections so that the user doesn't have to enter the password
+              each time he opens a connection. Of course, these passwords need to be stored somewhere. SQL developer stores
+              them in an encrypted form, but it is possible to decrypt them.
+              <br>
+              <br>
+              <b>Disclaimer</b>: This utility is meant to be used as a recovery option and all the data collected thorugh the
+              form never leaves this browser.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row my-3" *ngIf="password && password != ''">
+        <div class="col">
+          <div class="card">
+            <div class="card-body border border-success">
+              Password has been decrypted successfully !
+              <pre><code>{{password}}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-3" *ngIf="password == ''">
+        <div class="col">
+          <div class="card">
+            <div class="card-body border border-danger">
+              Password could not be decrypted :(
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
