@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --watch --base-href /sqldev-pw-decryptor/dist/sqldev-decryptor/",
+    "build-prod": "ng build --prod --build-optimizer",
+    "deploy" : "surge --project dist/sqldev-decryptor/ --domain sqldevdecrypt.surge.sh",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

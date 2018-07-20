@@ -7,7 +7,7 @@ import { enc, MD5, DES, mode, pad } from 'crypto-js';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  encryptedPassword = 'F35q3vdbVrI=0';
+  encryptedPassword = 'F35q3vdbVrI=';
   systemId = '3e8efb59-8a5a-4c13-b1d5-ff64f987787f';
 
   password;
