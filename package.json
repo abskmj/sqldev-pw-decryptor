@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build --watch --base-href /sqldev-pw-decryptor/dist/sqldev-decryptor/",
     "build-prod": "ng build --prod --build-optimizer",
-    "deploy" : "surge --project dist/sqldev-decryptor/ --domain sqldevdecrypt.surge.sh",
+    "deploy" : "npm run build-prod && surge --project dist/sqldev-decryptor/ --domain sqldevdecrypt.logicize.co",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
