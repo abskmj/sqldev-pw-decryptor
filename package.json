@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build --watch --base-href /sqldev-pw-decryptor/dist/sqldev-decryptor/",
     "build-prod": "ng build --prod --build-optimizer",
-    "deploy" : "npm run build-prod && surge --project dist/sqldev-decryptor/ --domain sqldevdecrypt.logicize.co",
+    "deploy": "npm run build-prod && surge --project dist/sqldev-decryptor/ --domain sqldevdecrypt.logicize.co",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,17 +22,16 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
-    "bootstrap": "^4.1.2",
+    "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "crypto-js": "^3.1.9-1",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "^6.0.3",
-    "@angular-devkit/build-angular": "~0.6.8",
-    "typescript": "~2.7.2",
+    "@angular-devkit/build-angular": "^0.803.18",
     "@angular/cli": "~6.0.8",
+    "@angular/compiler-cli": "^6.0.3",
     "@angular/language-service": "^6.0.3",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
@@ -47,7 +46,8 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
-    "tslint": "~5.9.1"
+    "tslint": "~5.9.1",
+    "typescript": "~2.7.2"
   },
   "repository": {
     "type": "git",
