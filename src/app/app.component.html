@@ -11,7 +11,8 @@
         <div class="card-body">
           <div class="form-group">
             <label for="encryptedPassword">Encrypted Password</label>
-            <input id="encryptedPassword" type="text" class="form-control" [(ngModel)]="encryptedPassword" aria-describedby="encryptedPasswordHelp">
+            <input id="encryptedPassword" type="text" class="form-control" [(ngModel)]="encryptedPassword"
+              aria-describedby="encryptedPasswordHelp">
             <small id="encryptedPasswordHelp" class="form-text text-muted">
               Passwords are stored encrypted in the
               <code>connections.xml</code> file which can be searched for in these locations:
@@ -34,7 +35,8 @@
           </div>
           <div class="form-group">
             <label for="systemId">System Id</label>
-            <input id="systemId" type="text" class="form-control" [(ngModel)]="systemId" aria-describedby="systemIdHelp">
+            <input id="systemId" type="text" class="form-control" [(ngModel)]="systemId"
+              aria-describedby="systemIdHelp">
             <small id="systemIdHelp" class="form-text text-muted">
               Encryption key by default is a machine-unique value
               <code>db.system.id</code> in the
@@ -66,18 +68,18 @@
           </div>
         </div>
       </div>
-      
+
       <div class="row my-3">
         <div class="col">
           <div class="card">
             <div class="card-body">
-              Oracle SQL Developer allows a user to associate passwords with connections so that the user doesn't have to enter the password
-              each time he opens a connection. Of course, these passwords need to be stored somewhere. SQL developer stores
-              them in an encrypted form, but it is possible to decrypt them.
+              Oracle SQL Developer allows a user to associate passwords with connections so that the user doesn't have
+              to enter the password each time they open a connection. Of course, these passwords need to be stored
+              somewhere. SQL developer stores them in an encrypted form, but it is possible to decrypt them.
               <br>
               <br>
-              <b>Disclaimer</b>: This utility is meant to be used as a recovery option and all the data collected thorugh the
-              form never leaves this browser.
+              <b>Disclaimer</b>: This utility is meant to be used as a recovery option and all the data collected
+              through the form never leaves this browser.
             </div>
           </div>
         </div>
