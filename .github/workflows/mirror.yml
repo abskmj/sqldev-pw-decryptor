@@ -1,9 +1,9 @@
-name: Mirroring
+name: Mirror to Gitlab
 
 on: [push, delete]
 
 jobs:
-  to_gitlab:
+  gitlab:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
